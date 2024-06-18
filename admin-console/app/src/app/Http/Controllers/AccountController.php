@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use App\Models\Account;
-use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
 class AccountController extends Controller
 {
@@ -32,7 +30,7 @@ class AccountController extends Controller
         $accounts = Account::All();
 
         //条件を指定して取得
-        $accounts = Account::where('name', '=', 'Bekomochi' || 'password', '=', 'Kashiwamochi')->get;
+        //$accounts = Account::where('name', '=', 'Bekomochi' || 'password', '=', 'Kashiwamochi')->get;
     }
 
     /*public function index(Request $request)

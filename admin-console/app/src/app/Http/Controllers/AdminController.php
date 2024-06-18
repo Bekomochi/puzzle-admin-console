@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
-use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Http\Request;
 
 class AdminController

@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\AccountController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\AdminController;
+use app\Http\Controllers\AccountController;
+use app\Http\Controllers\AdminController;
+use app\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /* Route::post('○○/□□'～);の['○○/□□']はurl
@@ -29,8 +29,8 @@ Route::post('auth/dologin', [AuthController::class, 'dologin']);
 Route::get('auth/login', [AuthController::class, 'login']);
 
 //ログアウト処理
-Route::post('dologout', [AuthController::class, 'dologout']);
-Route::get('logout', [AuthController::class, 'logout']);
+Route::post('auth/dologout', [AuthController::class, 'dologout']);
+Route::get('auth/logout', [AuthController::class, 'logout']);
 
 Route::get('Admin/item', [AdminController::class, 'item']);
 Route::get('Admin/player', [AdminController::class, 'player']);

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -13,23 +13,23 @@ class AuthController extends Controller
 
     public function dologin(Request $request) //$requestの中に名前とパスワードの情報が入っている
     {
-        if ($request['name'] === 'Bekomochi' && $request['password'] === 'Kashiwamochi') { //nameが'jobi',passwordが'jobi'だったら
-            $request->session()->put('login', true);
-            return redirect('accounts/index'); //accounts/indexにリダイレクト
+        if ($request['name'] === 'jobi' && $request['password'] === 'jobi') { //nameが'jobi',passwordが'jobi'だったら
+            $request->session()->put('auth/login', true);
+            return redirect('auth/index'); //auth/indexにリダイレクト
         } else {
-            return view('accounts/loginview');//不一致だったらログイン画面を表示
+            return view('auth/loginview');//不一致だったらログイン画面を表示
         }
     }
 
     public function logout(Request $request)
     {
-        return view('accounts/loginview');
+        return view('auth/loginview');
     }
 
     public function dologout(Request $request)
     {
         $request->session()->flush();
         $request->session()->forget('login');
-        return redirect('accounts/login');
+        return redirect('auth/login');
     }
 }
