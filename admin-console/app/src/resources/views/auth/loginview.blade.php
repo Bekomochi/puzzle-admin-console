@@ -11,7 +11,7 @@
 <body>
 
 <div class="d-flex justify-content-center">
-    <form method="post" action="{{url('accounts/dologin')}}">
+    <form method="post" action="{{url('auth/dologin')}}">
         @csrf <!--csrf対策-->
         <h1 class="text-center">ログイン</h1>
 
@@ -22,18 +22,8 @@
             <input class="btn btn-secondary" type="submit" value="送信">
         </div>
 
-        @if($errors->any())
-            <ul>
-                <!--$errorsにバリデーションエラーが設定されてフォーム画面に戻る-->
-                @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        @endif
-
     </form>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

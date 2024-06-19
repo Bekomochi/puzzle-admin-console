@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\AccountController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AuthController;
+use app\Http\Controllers\AccountController;
+use app\Http\Controllers\AdminController;
+use app\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /* Route::post('○○/□□'～);の['○○/□□']はurl
@@ -21,16 +21,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('auth/login', [AuthController::class, 'login']);
+Route::get('/', [AuthController::class, 'login']);
 
 Route::get('accounts/index', [AccountController::class, 'index']);
 
 Route::post('auth/dologin', [AuthController::class, 'dologin']);
-
+Route::get('auth/login', [AuthController::class, 'login']);
 
 Route::get('auth/logout', [AuthController::class, 'logout']);
 Route::post('auth/dologout', [AuthController::class, 'dologout']);
-
 
 Route::get('Admin/item', [AdminController::class, 'item']);
 Route::get('Admin/player', [AdminController::class, 'player']);

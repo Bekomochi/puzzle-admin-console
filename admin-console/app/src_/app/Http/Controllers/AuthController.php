@@ -1,15 +1,36 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    //
+    /*public function index(Request $request)
+    {
+        $title = 'title';
+        /*DebugBar::info('abcdefg');
+        DebugBar::error('エラー');
+
+        //セッションに指定のキーで値を保存
+        $request->session()->put('name', 'jobi');
+        $request->session()->put('password', 'jobi');
+
+        //セッションから指定のキーを取得
+        $value = $request->session()->get('name', 'password');
+
+        //指定したデータをセッションから削除
+        //$request->session()->forget('name');
+
+        //セッションの全てのデータを削除
+        //$request->session()->flush();
+
+        return view('accounts/index', ['title' => $title]); //viewに変数を渡す
+    }*/
+
     public function login(Request $request)
     {
-        return view('auth/loginview');
+        return view('auth/loginview'); //viewに変数を渡す
     }
 
     public function dologin(Request $request) //$requestの中に名前とパスワードの情報が入っている
@@ -31,7 +52,6 @@ class AuthController extends Controller
     {
         $request->session()->flush();
         $request->session()->forget('login');
-
         return redirect('auth/login');
     }
 }

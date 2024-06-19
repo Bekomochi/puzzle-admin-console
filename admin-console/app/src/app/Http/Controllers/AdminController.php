@@ -1,23 +1,38 @@
 <?php
 
-namespace app\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController
+class AdminController extends Controller
 {
     public function item(Request $request)
     {
+        //ログアウト状態だったらログイン画面へ遷移
+        if (!$request->session()->exists('login')) {
+            return redirect('auth/login');
+        }
+
         return view('Admin/itemView');//アイテム一覧を表示
     }
 
     public function player(Request $request)
     {
-        return view('Admin/playerView');
+        //ログアウト状態だったらログイン画面へ遷移
+        if (!$request->session()->exists('login')) {
+            return redirect('auth/login');
+        }
+
+        return view('Admin/playerView');//プレイヤー一覧を表示
     }
 
     public function having(Request $request)
     {
-        return view('Admin/havingView');
+        //ログアウト状態だったらログイン画面へ遷移
+        if (!$request->session()->exists('login')) {
+            return redirect('auth/login');
+        }
+        
+        return view('Admin/havingView');//所持プレイヤーを表示
     }
 }
