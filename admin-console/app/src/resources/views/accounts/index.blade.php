@@ -8,17 +8,17 @@
 <!-- <h1> { {$title} } </h1> <!- { {$変数名} }　で出力 -->
 <div class="d-flex justify-content-center">
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-        <form action="{{url('Admin/item')}}">
+        <form action="{{url('admin/item')}}">
             @csrf
             <input class="btn btn-danger" type="submit" value="アイテム一覧を表示">
         </form>
 
-        <form action="{{url('Admin/player')}}">
+        <form action="{{url('admin/player')}}">
             @csrf
             <input class="btn btn-warning" type="submit" value="プレイヤー一覧を表示">
         </form>
 
-        <form action="{{url('Admin/having')}}">
+        <form action="{{url('admin/having')}}">
             @csrf
             <input class="btn btn-success" type="submit" value="所持アイテム一覧を表示">
         </form>

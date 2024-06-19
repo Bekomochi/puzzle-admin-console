@@ -32,7 +32,7 @@ class AdminController extends Controller
         if (!$request->session()->exists('login')) {
             return redirect('auth/login');
         }
-        
+
         return view('Admin/havingView');//所持プレイヤーを表示
     }
 }

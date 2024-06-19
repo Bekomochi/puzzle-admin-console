@@ -15,7 +15,7 @@ class AuthController extends Controller
     public function dologin(Request $request) //$requestの中に名前とパスワードの情報が入っている
     {
         if ($request['name'] === 'jobi' && $request['password'] === 'jobi') { //nameが'jobi',passwordが'jobi'だったら
-            $request->session()->put('auth/login', true);
+            $request->session()->put('login', true);
             return redirect('accounts/index'); //accounts/indexにリダイレクト
         } else {
             return view('auth/loginview');//不一致だったらログイン画面を表示
