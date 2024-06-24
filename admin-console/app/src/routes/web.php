@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 //条件指定も全て表示も対応させる
 //Route::get('auth/index/{account_name?}', [AccountController::class, 'index']);*/
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [AuthController::class, 'login']);
 
 Route::get('auth/login', [AuthController::class, 'login']);
 Route::post('auth/dologin', [AuthController::class, 'dologin']);
@@ -30,5 +28,5 @@ Route::get('auth/logout', [AuthController::class, 'logout']);
 Route::post('auth/dologout', [AuthController::class, 'dologout']);
 
 Route::get('admin/item', [AdminController::class, 'item']);
-Route::get('admin/player', [AdminController::class, 'player']);
+Route::get('admin/user', [AdminController::class, 'user']);
 Route::get('admin/having', [AdminController::class, 'having']);
