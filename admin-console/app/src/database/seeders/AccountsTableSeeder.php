@@ -16,10 +16,10 @@ class AccountsTableSeeder extends Seeder
     public function run(): void
     {
         //シーダーを使った初期データの登録
-        /*Account::create([
+        Account::create([
             'name' => 'jobi',
             'password' => Hash::make('jobi') //LaravelのHashクラス
-        ]);*/
+        ]);
 
         User::factory(10)->create();
     }

@@ -7,7 +7,7 @@
     <table class="table">
         <tr>
             <td>
-                名前
+                
             </td>
             <td>
                 レベル
@@ -28,14 +28,14 @@
                 19
             </td>
             <td>
-                713
+                7130
             </td>
             <td>
                 100
             </td>
         </tr>
     </table>
-    
+
     <form action="{{url('accounts/index')}}">
         <div class="d-flex justify-content-center">
             <input class="btn btn-secondary" type="submit" value="戻る">

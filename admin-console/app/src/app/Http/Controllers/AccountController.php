@@ -20,6 +20,7 @@ class AccountController extends Controller
     {
         //レコードを追加(insert intoで追加)
         Account::create(['name' => 'cucumber', 'password' => 'kyuri']);
+        return redirect()->route('accounts.index');//第一引数でrouteのnameを指定
     }
 }
 
