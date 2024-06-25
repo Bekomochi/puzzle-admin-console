@@ -17,7 +17,8 @@ class AuthController extends Controller
     {
         if ($request['name'] === 'jobi' && $request['password'] === 'jobi') { //nameが'jobi',passwordが'jobi'だったら
             $request->session()->put('login', true);
-            return redirect('accounts/index'); //accounts/indexにリダイレクト
+            return redirect()->route('accounts.index'); //リダイレクト先(index)をルートで指定
+            //以前のようにredirectで記入せず、->routeで指定する
         } else {
             echo '<p style="color: #FF2D20" >名前、またはパスワードが間違っています。</p>';
             return view('auth/loginview');//不一致だったらログイン画面を表示
@@ -35,13 +36,5 @@ class AuthController extends Controller
         $request->session()->forget('login');
 
         return redirect('auth/login');
-    }
-
-    //データベースアクセス・削除
-    public function destroy(Request $request)
-    {
-        //idで検索した後にレコードを削除
-        $accounts = Account::findOfFail(2);
-        $accounts->delete();
     }
 }

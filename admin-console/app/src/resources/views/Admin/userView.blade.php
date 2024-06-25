@@ -7,7 +7,7 @@
     <table class="table">
         <tr>
             <td>
-                
+
             </td>
             <td>
                 レベル
@@ -36,7 +36,7 @@
         </tr>
     </table>
 
-    <form action="{{url('accounts/index')}}">
+    <form action="{{route('accounts.index')}}">
         <div class="d-flex justify-content-center">
             <input class="btn btn-secondary" type="submit" value="戻る">
         </div>

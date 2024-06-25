@@ -5,7 +5,6 @@
 
 
 <h1 class="text-center">ゲームの管理</h1>
-<!-- <h1> { {$title} } </h1> <!- { {$変数名} }　で出力 -->
 <div class="d-flex justify-content-center">
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
         <form action="{{url('admin/item')}}">
