@@ -16,9 +16,10 @@
                 パスワード
             </td>
         </tr>
-        <tr>
 
-            @foreach($accounts as $account)
+
+        @foreach($accounts as $account)
+            <tr>
                 <td>
                     {{$account['id']}}
                 </td>
@@ -28,8 +29,9 @@
                 <td>
                     {{$account['password']}}
                 </td>
-            @endforeach
-        </tr>
+            </tr>
+        @endforeach
+
     </table>
 
     <form action="{{route('accounts.create')}}">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Account;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AccountController extends Controller
 {
@@ -33,8 +34,8 @@ class AccountController extends Controller
     public function store(Request $request)
     {
         //レコードを追加(insert intoで追加)
-        Account::create(['name' => ['name'], 'password' => ['password']]);
-        return view('accounts.create_cmp');
+        Account::create(['name' => $request['name'], 'password' => Hash::make($request['password'])]);
+        return redirect()->route('accounts.create_cmp');
     }
 
     public function create_cmp(Request $request)
