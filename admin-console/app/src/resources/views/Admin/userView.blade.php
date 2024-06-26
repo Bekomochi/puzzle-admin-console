@@ -12,12 +12,21 @@
             <td>
                 名前
             </td>
+            <td>
+                パスワード
+            </td>
         </tr>
         <tr>
 
             @foreach($accounts as $account)
                 <td>
-                    {{$account[]}}
+                    {{$account['id']}}
+                </td>
+                <td>
+                    {{$account['name']}}
+                </td>
+                <td>
+                    {{$account['password']}}
                 </td>
             @endforeach
         </tr>

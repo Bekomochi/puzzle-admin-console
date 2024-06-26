@@ -21,7 +21,6 @@
         <div class="d-flex justify-content-center">
             <input class="btn btn-secondary" type="submit" value="送信">
         </div>
-
     </form>
 </div>
 
