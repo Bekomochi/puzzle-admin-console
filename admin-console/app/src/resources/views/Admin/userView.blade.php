@@ -7,40 +7,32 @@
     <table class="table">
         <tr>
             <td>
-
+                ID
             </td>
             <td>
-                レベル
-            </td>
-            <td>
-                総合経験値
-            </td>
-            <td>
-                ライフ
+                名前
             </td>
         </tr>
-
         <tr>
-            <td>
-                miura
-            </td>
-            <td>
-                19
-            </td>
-            <td>
-                7130
-            </td>
-            <td>
-                100
-            </td>
+
+            @foreach($accounts as $account)
+                <td>
+                    {{$account[]}}
+                </td>
+            @endforeach
         </tr>
     </table>
 
+    <form action="{{route('accounts.create')}}">
+        <input type="submit" value="新規登録">
+    </form>
     <form action="{{route('accounts.index')}}">
         <div class="d-flex justify-content-center">
             <input class="btn btn-secondary" type="submit" value="戻る">
         </div>
-
+    </form>
+    <form action="{{route('accounts.delete')}}">
+        <input type="submit" value="削除">
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

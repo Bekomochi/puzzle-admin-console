@@ -29,6 +29,16 @@ Route::prefix('accounts')->name('accounts.')->controller(AccountController::clas
     ->middleware(AuthMiddleware::class)->group(function () {
         //一覧表示画面
         Route::get('/', 'index')->name('index');
+
+        //新規登録画面、登録処理
+        Route::get('create', 'create')->name('create');//登録画面
+        Route::get('create_cmp', 'create_cmp')->name('create_cmp');//登録完了画面
+        Route::post('store', 'store')->name('store');//登録処理
+
+        //削除確認画面、削除処理
+        Route::get('delete', 'delete')->name('delete');//削除確認画面
+        Route::get('delete_cmp', 'delete_cmp')->name('delete_cmp');//削除完了画面
+        Route::post('destroy', 'destroy')->name('destroy');//削除処理
     });
 
 //個別記事

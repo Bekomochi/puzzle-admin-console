@@ -8,7 +8,6 @@
     <p><input type="password" placeholder="ここに入力してください"></p>
     <p><input type="password" placeholder="再入力してください"></p>
     <input type="submit" value="送信">
-
 </form>
 
 </body>

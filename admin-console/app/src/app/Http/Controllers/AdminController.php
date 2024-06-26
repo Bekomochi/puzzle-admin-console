@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -12,8 +14,8 @@ class AdminController extends Controller
         if (!$request->session()->exists('login')) {
             return redirect('auth/login');
         }
-
-        return view('Admin/itemView');//アイテム一覧を表示
+        $accounts = Account::all();
+        return view('Admin/itemView', ['accounts' => $accounts]);//アイテム一覧を表示
     }
 
     public function user(Request $request)
@@ -22,8 +24,9 @@ class AdminController extends Controller
         if (!$request->session()->exists('login')) {
             return redirect('auth/login');
         }
-
-        return view('Admin/userView');//プレイヤー一覧を表示
+        $accounts = Account::all();
+        //dd($accounts);
+        return view('Admin.userView', ['accounts' => $accounts]);
     }
 
     public function having(Request $request)
