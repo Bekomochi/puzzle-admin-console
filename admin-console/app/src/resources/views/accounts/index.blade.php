@@ -12,7 +12,7 @@
             <input class="btn btn-danger" type="submit" value="アイテム一覧を表示">
         </form>
 
-        <form action="{{url('admin/user')}}">
+        <form action="{{url('admin/accounts')}}">
             @csrf
             <input class="btn btn-warning" type="submit" value="アカウント一覧を表示">
         </form>

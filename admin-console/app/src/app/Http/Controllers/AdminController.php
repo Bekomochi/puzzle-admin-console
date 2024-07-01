@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -18,7 +17,7 @@ class AdminController extends Controller
         return view('Admin/itemView', ['accounts' => $accounts]);//アイテム一覧を表示
     }
 
-    public function user(Request $request)
+    public function accounts(Request $request)
     {
         //ログアウト状態だったらログイン画面へ遷移
         if (!$request->session()->exists('login')) {
@@ -26,7 +25,7 @@ class AdminController extends Controller
         }
         $accounts = Account::all();
         //dd($accounts);
-        return view('Admin.userView', ['accounts' => $accounts]);
+        return view('Admin.accountsView', ['accounts' => $accounts]);
     }
 
     public function having(Request $request)

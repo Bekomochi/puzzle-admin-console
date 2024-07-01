@@ -43,5 +43,5 @@ Route::prefix('accounts')->name('accounts.')->controller(AccountController::clas
 
 //個別記事
 Route::get('admin/item', [AdminController::class, 'item']);//アイテム
-Route::get('admin/user', [AdminController::class, 'user']);//ユーザー
+Route::get('admin/accounts', [AdminController::class, 'accounts']);//ユーザー
 Route::get('admin/having', [AdminController::class, 'having']);//アイテム所持
