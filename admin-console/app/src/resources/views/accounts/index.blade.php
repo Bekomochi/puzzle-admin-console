@@ -14,7 +14,7 @@
 
         <form action="{{url('admin/user')}}">
             @csrf
-            <input class="btn btn-warning" type="submit" value="プレイヤー一覧を表示">
+            <input class="btn btn-warning" type="submit" value="アカウント一覧を表示">
         </form>
 
         <form action="{{url('admin/having')}}">

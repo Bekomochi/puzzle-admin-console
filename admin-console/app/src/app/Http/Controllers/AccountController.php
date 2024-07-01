@@ -17,7 +17,7 @@ class AccountController extends Controller
         //テーブルの全てのレコードを取得
         $accounts = Account::all();
         //dd($accounts);
-        return view('accounts/index', ['accounts' => $accounts]);//プレイヤー一覧を表示);
+        return view('accounts/index', ['accounts' => $accounts]);//アカウント一覧を表示;
     }
 
     //新規登録画面へ遷移
@@ -57,12 +57,5 @@ class AccountController extends Controller
         return view('accounts.delete');
     }
 
-    //削除処理
-    public function destroy(Request $request)
-    {
-        //idで検索した後にレコードを削除
-        $accounts = Account::findOfFail(['id']);
-        $accounts->delete();
-    }
 }
 
