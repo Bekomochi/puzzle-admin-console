@@ -3,7 +3,7 @@
 
 <h1>アカウントを削除しますか？</h1>
 
-<form method="post" action="{{route('accounts.delete')}}">
+<form method="post" action="{{route('accounts.destroy')}}">
     <input type="submit" value="はい">
 </form>
 <form method="post" action="{{route('accounts.index')}}">

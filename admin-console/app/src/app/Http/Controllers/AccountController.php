@@ -54,6 +54,8 @@ class AccountController extends Controller
         if (!$request->session()->exists('login')) {
             return redirect('auth/login');
         }
+        $account = Account::findOrfail('id');
+        $account->delete();
         return view('accounts.delete');
     }
 
