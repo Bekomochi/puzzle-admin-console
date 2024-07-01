@@ -4,63 +4,55 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 <div class="container">
-    <!--各ページのビュー(子ビュー)-->
-    @extends('layouts.app')<!--親ビューの指定-->
-    @section('title','アカウント表示画面')<!--親ビューのyield部分の指定-->
 
-    <!--親ビューのyield部分の指定-->
+    <table class="table">
+        <tr>
+            <td>
+                ID
+            </td>
+            <td>
+                名前
+            </td>
+            <td>
+                パスワード
+            </td>
 
-    @section('body')
+        </tr>
 
-        <table class="table">
+
+        @foreach($accounts as $account)
             <tr>
                 <td>
-                    ID
+                    {{$account['id']}}
                 </td>
                 <td>
-                    名前
+                    {{$account['name']}}
                 </td>
                 <td>
-                    パスワード
+                    {{$account['password']}}
                 </td>
-
+                <td>
+                    <form method="post" action="{{ route('accounts.destroy') }}">
+                        <input type="submit" value="削除">
+                    </form>
+                </td>
             </tr>
+        @endforeach
 
+    </table>
 
-            @foreach($accounts as $account)
-                <tr>
-                    <td>
-                        {{$account['id']}}
-                    </td>
-                    <td>
-                        {{$account['name']}}
-                    </td>
-                    <td>
-                        {{$account['password']}}
-                    </td>
-                    <td>
-                        <form method="post" action="{{ route('accounts.delete') }}">
-                            <input type="submit" value="削除">
-                        </form>
-                    </td>
-                </tr>
-            @endforeach
-
-        </table>
-
-        <form action="{{route('accounts.create')}}">
-            <input type="submit" value="新規登録">
-        </form>
-        <form action="{{route('accounts.index')}}">
-            <div class="d-flex justify-content-center">
-                <input class="btn btn-secondary" type="submit" value="戻る">
-            </div>
-        </form>
+    <form action="{{route('accounts.create')}}">
+        <input type="submit" value="新規登録">
+    </form>
+    <form action="{{route('accounts.index')}}">
+        <div class="d-flex justify-content-center">
+            <input class="btn btn-secondary" type="submit" value="戻る">
+        </div>
+    </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-@endsection
 
 </body>
 </html>
