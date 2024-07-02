@@ -76,6 +76,4 @@ class AccountController extends Controller
         }
         return view('accounts.delete_cmp');
     }
-
 }
-
