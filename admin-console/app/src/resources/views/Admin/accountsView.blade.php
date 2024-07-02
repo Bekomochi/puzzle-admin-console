@@ -32,7 +32,9 @@
                     {{$account['password']}}
                 </td>
                 <td>
-                    <form method="post" action="{{ route('accounts.destroy') }}">
+                    <form action="{{ route('accounts.delete') }}">
+                        @csrf
+                        <input type="hidden" name="id" value="{{$account['id']}}">
                         <input type="submit" value="削除">
                     </form>
                 </td>
@@ -42,9 +44,11 @@
     </table>
 
     <form action="{{route('accounts.create')}}">
+        @csrf
         <input type="submit" value="新規登録">
     </form>
     <form action="{{route('accounts.index')}}">
+        @csrf
         <div class="d-flex justify-content-center">
             <input class="btn btn-secondary" type="submit" value="戻る">
         </div>

@@ -33,7 +33,11 @@ class AccountController extends Controller
     //新規登録処理
     public function store(Request $request)
     {
-        //レコードを追加(insert intoで追加)
+        $name = Account::where('name', '=', $request['name'])->get();
+        if ($name->count() > 0) //レコードを追加(insert intoで追加)
+        {
+            return redirect()->route('accounts.create');
+        }
         Account::create(['name' => $request['name'], 'password' => Hash::make($request['password'])]);
         return redirect()->route('accounts.create_cmp');
     }
@@ -44,7 +48,7 @@ class AccountController extends Controller
         if (!$request->session()->exists('login')) {
             return redirect('auth/login');
         }
-        return redirect()->route('accounts.index');
+        return view('accounts.create_cmp');
     }
 
     //削除確認画面へ遷移
@@ -54,9 +58,23 @@ class AccountController extends Controller
         if (!$request->session()->exists('login')) {
             return redirect('auth/login');
         }
-        $account = Account::findOrfail('id');
+        return view('accounts.delete', ['id' => $request['id']]);
+    }
+
+    public function destroy(Request $request)
+    {
+        $account = Account::findOrFail($request['id']);//idが見つからなかったら404エラー
         $account->delete();
-        return view('accounts.delete');
+        return redirect()->route('accounts.delete_cmp');
+    }
+
+    public function delete_cmp(Request $request)
+    {
+        //ログアウト状態だったらログイン画面へ遷移
+        if (!$request->session()->exists('login')) {
+            return redirect('auth/login');
+        }
+        return view('accounts.delete_cmp');
     }
 
 }

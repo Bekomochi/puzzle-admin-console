@@ -4,7 +4,7 @@
 
 <h1>登録しました。</h1>
 
-<form method="post" action="{{route('accounts.index')}}">
+<form method="get" action="{{route('accounts.index')}}">
     @csrf
     <div class="d-flex justify-content-center">
         <input class="btn btn-secondary" type="submit" value="戻る">
