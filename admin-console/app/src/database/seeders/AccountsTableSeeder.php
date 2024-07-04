@@ -20,7 +20,5 @@ class AccountsTableSeeder extends Seeder
             'name' => 'jobi',
             'password' => Hash::make('jobi') //LaravelのHashクラス
         ]);
-
-        User::factory(10)->create();
     }
 }
