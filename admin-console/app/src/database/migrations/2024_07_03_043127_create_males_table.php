@@ -12,6 +12,10 @@ return new class extends Migration {
     {
         Schema::create('males', function (Blueprint $table) {
             $table->id();
+            $table->integer('account_id');//送信先のid
+            $table->string('male_title');//メールのタイトル
+            $table->string('male_body');//メールの本文
+            $table->integer('item_id');//アイテムのid
             
             $table->timestamps();
         });

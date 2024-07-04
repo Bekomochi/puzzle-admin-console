@@ -41,6 +41,11 @@ Route::prefix('accounts')->name('accounts.')->controller(AccountController::clas
         Route::post('destroy', 'destroy')->name('destroy');//削除処理
     });
 
+Route::prefix('items')->name('items.')->controller(\App\Http\Controllers\ItemController::class)
+    ->middleware(AuthMiddleware::class)->group(function () {
+    });
+
+
 //個別記事
 Route::get('admin/item', [AdminController::class, 'item']);//アイテム
 Route::get('admin/accounts', [AdminController::class, 'accounts']);//ユーザー
