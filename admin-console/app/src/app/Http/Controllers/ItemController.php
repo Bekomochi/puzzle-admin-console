@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Admin;
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -14,7 +14,7 @@ class ItemController extends Controller
         if (!$request->session()->exists('login')) {
             return redirect('auth/login');
         }
-        $items = Admin::all();
+        $items = Item::all();
         return view('Admin.itemView', ['items' => $items]);//アイテム一覧を表示
     }
 }
