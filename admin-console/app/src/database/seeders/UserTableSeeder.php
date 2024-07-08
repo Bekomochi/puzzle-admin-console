@@ -15,7 +15,6 @@ class UserTableSeeder extends Seeder
     {
         /*シーダーでファクトリーを呼び出す。
           数値は、生成するレコード数。*/
-
-        User::factory(100)->create();
+        //User::factory(20)->create();
     }
 }

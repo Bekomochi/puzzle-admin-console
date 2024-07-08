@@ -15,12 +15,12 @@ return new class extends Migration {
         //テーブルのカラム構成を指定
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();                             //idカラム
-            $table->string('name', 20);//nameカラム
+            $table->string('name', 20)->unique();//nameカラム
             $table->string('password', 100);//nameカラム
 
             $table->timestamps();                    //created/update-at
 
-            $table->unique('name');//nameにユニーク制約設定
+            //$table->unique('name');//nameにユニーク制約設定
             //$table->index(○○)でindex設定
         });
     }
