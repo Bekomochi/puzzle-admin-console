@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,8 +14,8 @@ class AdminController extends Controller
         if (!$request->session()->exists('login')) {
             return redirect('auth/login');
         }
-        $accounts = Account::all();
-        return view('Admin/itemView', ['accounts' => $accounts]);//アイテム一覧を表示
+        $items = Item::all();
+        return view('Admin.itemView', ['items' => $items]);//アイテム一覧を表示
     }
 
     public function accounts(Request $request)

@@ -17,7 +17,7 @@ class AccountController extends Controller
         //テーブルの全てのレコードを取得
         $accounts = Account::all();
         //dd($accounts);
-        return view('accounts/index', ['accounts' => $accounts]);//アカウント一覧を表示;
+        return view('accounts.index', ['accounts' => $accounts]);//アカウント一覧を表示;
     }
 
     //新規登録画面へ遷移

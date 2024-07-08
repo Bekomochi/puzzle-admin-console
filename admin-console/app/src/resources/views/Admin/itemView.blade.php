@@ -19,8 +19,28 @@
                 説明
             </td>
         </tr>
+
+        @foreach($items as $item)
+            <tr>
+                <td>
+                    {{$item['id']}}
+                </td>
+                <td>
+                    {{$item['name']}}
+                </td>
+                <td>
+                    {{$item['effect']}}
+                </td>
+                <td>
+                    {{$item['explanation']}}
+                </td>
+            </tr>
+        @endforeach
+
+
     </table>
 </div>
+
 
 <form action="{{route('accounts.index')}}">
     <div class="d-flex justify-content-center">
