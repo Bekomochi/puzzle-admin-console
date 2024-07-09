@@ -11,7 +11,7 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        //エラーの時はHTTPステータス400を返す
+        //エラーの時は[HTTPステータス400]を返す
 
         $user=User::create([
             'name'=>$request->name,

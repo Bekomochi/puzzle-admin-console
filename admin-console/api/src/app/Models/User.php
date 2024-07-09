@@ -12,6 +12,6 @@ class User extends Model
     public function items()
     {
     return $this->belongsToMany(
-        items::class,'user_items','user_id,item')->withPivot('smpimt');
+        item::class,'user_items','user_id,item')->withPivot('smpimt');
     }
 }

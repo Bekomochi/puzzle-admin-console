@@ -1,9 +1,18 @@
 ###ユーザー登録
 
-POST http://localhost:8080/api/users/store
+GET http://localhost:8080/api/users/1
+###
+Accept:application/json
+###
+GET http://localhost:8080/api/items/1
+###
+Accept:application/json
 
-###リクエスト本体がJSONであるという宣言
+###
+POST http://localhost:8080/api/users/store
+###
 Content-Type:application/json
+###
 Accept:application/json
 
 {
