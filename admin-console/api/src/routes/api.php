@@ -9,3 +9,6 @@ Route::middleware(NoCacheMiddleware::class)
 
     ->get('users/{user_id}',[UserController::class,"show"])
     ->name('users.show');
+
+Route::post('users/store',[UserController::class,'store'])
+->name('store');

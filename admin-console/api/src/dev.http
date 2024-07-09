@@ -1,0 +1,11 @@
+###ユーザー登録
+
+POST http://localhost:8080/api/users/store
+
+###リクエスト本体がJSONであるという宣言
+Content-Type:application/json
+Accept:application/json
+
+{
+'name':'jobi'
+}
