@@ -9,9 +9,5 @@ class User extends Model
 {
     use HasFactory;
 
-    public function items()
-    {
-    return $this->belongsToMany(
-        item::class,'user_items','user_id,item')->withPivot('smpimt');
-    }
+    protected $guarded = ['id'];
 }

@@ -1,20 +1,9 @@
-###ユーザー登録
+###ユーザー情報取得
 
-GET http://localhost:8080/api/users/1
-###
-Accept:application/json
-###
-GET http://localhost:8080/api/items/1
-###
-Accept:application/json
+GET http://localhost:8000/api/users/1
+Accept: application/json
 
-###
-POST http://localhost:8080/api/users/store
-###
-Content-Type:application/json
-###
-Accept:application/json
+###アイテム取得
 
-{
-'name':'jobi'
-}
+GET http://localhost:8000/api/items/1
+Accept: application/json

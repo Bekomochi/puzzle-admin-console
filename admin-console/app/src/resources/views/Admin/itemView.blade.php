@@ -7,10 +7,10 @@
     <table class="table">
         <tr>
             <td>
-                名前
+                id
             </td>
             <td>
-                種類
+                名前
             </td>
             <td>
                 効果
