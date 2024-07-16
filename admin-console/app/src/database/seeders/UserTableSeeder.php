@@ -18,11 +18,7 @@ class UserTableSeeder extends Seeder
         //User::factory(20)->create();
 
         User::create([
-<<<<<<< HEAD
-            'name' => 'miura',
-=======
             'name' => 'みうら',
->>>>>>> parent of 5fdc68a (ファイルの追加、編集)
             'password' => 'Fennekin'
         ]);
     }
