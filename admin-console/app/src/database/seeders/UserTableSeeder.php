@@ -19,9 +19,7 @@ class UserTableSeeder extends Seeder
 
         User::create([
             'name' => 'miura',
-            'level' => 20,
-            'exp' => 175200,
-            'life' => 5
+            'password' => 'Fennekin'
         ]);
     }
 }
