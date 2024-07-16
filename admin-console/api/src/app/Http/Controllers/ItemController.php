@@ -9,7 +9,7 @@ class ItemController extends Controller
 {
     public function show(Request $request)
     {
-        $items = Item::findOrFail($request->items_id);
+        $items = Item::All();
         return response()->json($items);
     }
 }

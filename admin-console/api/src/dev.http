@@ -3,7 +3,9 @@
 GET http://localhost:8000/api/users/1
 Accept: application/json
 
+Accept:application/json
+
 ###アイテム取得
 
-GET http://localhost:8000/api/items
+GET http://localhost:8000/api/items/1
 Accept: application/json
