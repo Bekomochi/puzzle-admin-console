@@ -1,6 +1,6 @@
 ###ユーザー情報取得
 
-GET http://48.218.148.125/api/users/1
+GET http://4.241.174.220/api/users/1
 Accept: application/json
 
 Accept:application/json
