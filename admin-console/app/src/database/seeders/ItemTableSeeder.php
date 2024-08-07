@@ -16,7 +16,7 @@ class ItemTableSeeder extends Seeder
         //
         Item::create([
             'name' => '猫じゃらし',
-            'explanation' => '中央を横一列にピースを消去'
+            'explanation' => '中央を縦一列にピースを消去'
         ]);
         Item::create([
             'name' => 'マウス',
@@ -24,7 +24,7 @@ class ItemTableSeeder extends Seeder
         ]);
         Item::create([
             'name' => 'レーザーポインター',
-            'explanation' => '縦一列にピースを消去'
+            'explanation' => '中央を横一列にピースを消去'
         ]);
     }
 }

@@ -13,9 +13,6 @@
                 名前
             </td>
             <td>
-                効果
-            </td>
-            <td>
                 説明
             </td>
         </tr>
@@ -27,9 +24,6 @@
                 </td>
                 <td>
                     {{$item['name']}}
-                </td>
-                <td>
-                    {{$item['effect']}}
                 </td>
                 <td>
                     {{$item['explanation']}}
