@@ -13,7 +13,6 @@ return new class extends Migration {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name', 20);//アイテム名
-            $table->integer('effect');//アイテムの効果値
             $table->string('explanation', 50);//アイテムの効果の説明
             $table->timestamps();
         });

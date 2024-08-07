@@ -15,30 +15,16 @@ class ItemTableSeeder extends Seeder
     {
         //
         Item::create([
-            'name' => 'ハートスイーツ',
-            'effect' => 20,
-            'explanation' => 'HPを20回復する'
+            'name' => '猫じゃらし',
+            'explanation' => '中央を横一列にピースを消去'
         ]);
         Item::create([
-            'name' => 'おいしいみず',
-            'effect' => 30,
-            'explanation' => 'HPを30回復する'
+            'name' => 'マウス',
+            'explanation' => 'ジグザグにピースを消去'
         ]);
         Item::create([
-            'name' => 'サイコソーダ',
-            'effect' => 50,
-            'explanation' => 'HPを50回復する'
-        ]);
-        Item::create([
-            'name' => 'ミックスオレ',
-            'effect' => 80,
-            'explanation' => 'HPを80回復する'
-        ]);
-
-        Item::create([
-            'name' => 'モーモーミルク',
-            'effect' => 100,
-            'explanation' => 'HPを100回復する'
+            'name' => 'レーザーポインター',
+            'explanation' => '縦一列にピースを消去'
         ]);
     }
 }

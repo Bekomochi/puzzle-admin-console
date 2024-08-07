@@ -4,7 +4,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 
-<h1 class="text-center">ゲームの管理</h1>
+<h1 class="text-center">管理ツール</h1>
 <div class="d-flex justify-content-center">
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
         <form action="{{url('admin/item')}}">
