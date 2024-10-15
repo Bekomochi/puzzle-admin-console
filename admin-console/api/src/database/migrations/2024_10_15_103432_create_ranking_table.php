@@ -12,8 +12,8 @@ return new class extends Migration {
     {
         Schema::create('ranking', function (Blueprint $table) {
             $table->id();//ランキングID
-            $table->id('stage_id');
-            $table->id('user_id');
+            $table->integer('stageID');
+            $table->integer('userID');
             $table->integer('highScore');
             $table->timestamps();
         });
