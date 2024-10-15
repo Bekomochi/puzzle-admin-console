@@ -13,8 +13,11 @@ Route::middleware(NoCacheMiddleware::class)
 Route::post('users/store', [UserController::class, 'store'])
     ->name('store');
 
+/*Route::post('users/store', [UserController::class, 'store'])
+    ->middleware('auth:sanctum')->name('store');*/
+
 ###
 
-Route::middleware(NoCacheMiddleware::class)
+/*Route::middleware(NoCacheMiddleware::class)
     ->get('items/{items_id}', [ItemController::class, "show"])
-    ->name('item.show');
+    ->name('item.show');*/
