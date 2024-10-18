@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RankingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\NoCacheMiddleware;
@@ -13,11 +14,10 @@ Route::middleware(NoCacheMiddleware::class)
 Route::post('users/store', [UserController::class, 'store'])
     ->name('store');
 
-/*Route::post('users/store', [UserController::class, 'store'])
-    ->middleware('auth:sanctum')->name('store');*/
+//ランキング更新
+Route::post('ranking/store', [RankingController::class, 'store'])
+    ->name('store');
 
-###
-
-/*Route::middleware(NoCacheMiddleware::class)
-    ->get('items/{items_id}', [ItemController::class, "show"])
-    ->name('item.show');*/
+//ランキング表示
+Route::get('ranking/show', [RankingController::class, 'show'])
+    ->name('show');

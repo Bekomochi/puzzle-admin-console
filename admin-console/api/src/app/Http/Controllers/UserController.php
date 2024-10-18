@@ -25,6 +25,5 @@ class UserController extends Controller
 
         //ユーザーIDとAPIトークンを返す
         return response()->json(['user_id' => $user->id, 'token' => $token]);
-        //return response()->json(['user_id' => $user->id]);
     }
 }

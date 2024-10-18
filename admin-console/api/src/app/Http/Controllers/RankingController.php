@@ -16,10 +16,11 @@ class RankingController extends Controller
 
     public function store(Request $request)
     {
-        $user = Ranking::create([
+        $ranking = Ranking::create([
             'stageID' => $request->stageID,
             'userID' => $request->userID,
             'highScore' => $request->highScore
         ]);
+        return response()->json(['ranking_id' => $ranking->id]);
     }
 }
