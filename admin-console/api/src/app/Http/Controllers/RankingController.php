@@ -19,7 +19,7 @@ class RankingController extends Controller
 
     public function show(Request $request)
     {
-        $ranking = Ranking::findOrFail($request->stage_id);
+        $ranking = Ranking::where('stageID', '=', $request->stage_id)->orderByDesc('highScore')->get();
         return response()->json($ranking);
     }
 }

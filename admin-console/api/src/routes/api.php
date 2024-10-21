@@ -19,5 +19,5 @@ Route::post('rankings/store', [RankingController::class, 'store'])
     ->name('store');
 
 //ランキング表示
-Route::get('rankings/{stage_id}', [RankingController::class, 'show'])
+Route::get('rankings/show/{stage_id}', [RankingController::class, 'show'])
     ->name('rankings.show');

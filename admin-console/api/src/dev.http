@@ -6,8 +6,8 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "hoge",
-    "password": "fuga"
+    "name": "piyo",
+    "password": "hogera"
 }
 
 ###ユーザー情報取得
@@ -25,11 +25,11 @@ Accept: application/json
 
 {
     "stageID": 1,
-    "userID": 1,
-    "highScore": 3000
+    "userID": 2,
+    "highScore": 2000
 }
 
 ###ランキング表示
-GET http://localhost:8000/api/rankings/1
+GET http://localhost:8000/api/rankings/show/1
 Content-Type: application/json
 Accept: application/json
