@@ -1,20 +1,23 @@
 ##ユーザー##
+
 ###ユーザー登録
 POST http://localhost:8000/api/users/store
 Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "piyo",
-    "password": "hoge"
+    "name": "hoge",
+    "password": "fuga"
 }
 
 ###ユーザー情報取得
-GET http://localhost:8000/api/users/show
+GET http://localhost:8000/api/users/1
 Accept: application/json
 Accept:application/json
 
+
 ##ランキング##
+
 ###ランキング更新
 POST http://localhost:8000/api/rankings/store
 Content-Type: application/json
@@ -23,10 +26,10 @@ Accept: application/json
 {
     "stageID": 1,
     "userID": 1,
-    "highScore": 6000
+    "highScore": 3000
 }
 
 ###ランキング表示
-GET http://localhost:8000/api/rankings/show
+GET http://localhost:8000/api/rankings/1
+Content-Type: application/json
 Accept: application/json
-Accept:application/json

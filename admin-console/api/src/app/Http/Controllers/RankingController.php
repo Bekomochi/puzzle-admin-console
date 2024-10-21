@@ -7,12 +7,6 @@ use Illuminate\Http\Request;
 
 class RankingController extends Controller
 {
-    public function show(Request $request)
-    {
-        $ranking = Ranking::findOrFail($request->ranking_id);
-        return response()->json($ranking);
-    }
-
     public function store(Request $request)
     {
         $ranking = Ranking::create([
@@ -20,6 +14,12 @@ class RankingController extends Controller
             'userID' => $request->userID,
             'highScore' => $request->highScore
         ]);
-        return response()->json(['ranking_id' => $ranking->id]);
+        return response()->json(['stage_id' => $ranking->stageID]);
+    }
+
+    public function show(Request $request)
+    {
+        $ranking = Ranking::findOrFail($request->stage_id);
+        return response()->json($ranking);
     }
 }
