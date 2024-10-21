@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class RankingController extends Controller
 {
-    //
     public function show(Request $request)
     {
         $ranking = Ranking::findOrFail($request->ranking_id);

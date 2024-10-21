@@ -9,5 +9,11 @@ class Ranking extends Model
 {
     //use HasFactory;
 
+    protected $table = [
+        'stageID',
+        'userID',
+        'highScore'
+    ];
+
     protected $guarded = ['id'];
 }

@@ -19,7 +19,7 @@ Accept:application/json
 ##ランキング##
 
 ###ランキング更新
-POST http://localhost:8000/api/ranking/store
+POST http://localhost:8000/api/rankings/store
 Content-Type: application/json
 Accept: application/json
 
@@ -30,6 +30,6 @@ Accept: application/json
 }
 
 ###ランキング表示
-GET http://localhost:8000/api/ranking/show
+GET http://localhost:8000/api/rankings/show
 Content-Type: application/json
 Accept: application/json
