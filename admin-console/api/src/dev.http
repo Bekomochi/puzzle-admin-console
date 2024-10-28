@@ -6,20 +6,19 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "piyo",
-    "password": "hogera"
+    "name": "hoge",
+    "password": "hogehoge"
 }
 
 ###ユーザー情報取得
-GET http://api-catpuzzle.japaneast.cloudapp.azure.com/api/users/1
+GET https://api-catpuzzle.japaneast.cloudapp.azure.com/api/users/1
 Accept: application/json
 Accept:application/json
-
 
 ##ランキング##
 
 ###ランキング更新
-POST http://localhost:8000/api/rankings/store
+POST https://api-catpuzzle.japaneast.cloudapp.azure.com/rankings/store
 Content-Type: application/json
 Accept: application/json
 
@@ -30,6 +29,6 @@ Accept: application/json
 }
 
 ###ランキング表示
-GET http://localhost:8000/api/rankings/show/1
+GET https://api-catpuzzle.japaneast.cloudapp.azure.com/api/rankings/show/1
 Content-Type: application/json
 Accept: application/json
