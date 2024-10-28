@@ -18,17 +18,17 @@ Accept:application/json
 ##ランキング##
 
 ###ランキング更新
-POST https://api-catpuzzle.japaneast.cloudapp.azure.com/rankings/store
+POST https://api-catpuzzle.japaneast.cloudapp.azure.com/api/ranking/store
 Content-Type: application/json
 Accept: application/json
 
 {
     "stageID": 1,
-    "userID": 3,
+    "userID": 32,
     "highScore": 4000
 }
 
 ###ランキング表示
-GET https://api-catpuzzle.japaneast.cloudapp.azure.com/api/rankings/show/1
+GET https://api-catpuzzle.japaneast.cloudapp.azure.com/api/ranking/show/1
 Content-Type: application/json
 Accept: application/json

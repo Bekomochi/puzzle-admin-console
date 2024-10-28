@@ -15,9 +15,9 @@ Route::post('users/store', [UserController::class, 'store'])
     ->name('store');
 
 //ランキング更新
-Route::post('rankings/store', [RankingController::class, 'store'])
+Route::post('ranking/store', [RankingController::class, 'store'])
     ->name('store');
 
 //ランキング表示
-Route::get('rankings/show/{stage_id}', [RankingController::class, 'show'])
-    ->name('rankings.show');
+Route::get('ranking/show/{stage_id}', [RankingController::class, 'show'])
+    ->name('ranking.show');
