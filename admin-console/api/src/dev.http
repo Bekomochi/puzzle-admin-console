@@ -1,7 +1,7 @@
 ##ユーザー##
 
 ###ユーザー登録
-POST http://localhost:8000/api/users/store
+POST https://api-catpuzzle.japaneast.cloudapp.azure.com/api/users/store
 Content-Type: application/json
 Accept: application/json
 
@@ -11,7 +11,7 @@ Accept: application/json
 }
 
 ###ユーザー情報取得
-GET http://localhost:8000/api/users/1
+GET http://api-catpuzzle.japaneast.cloudapp.azure.com/api/users/1
 Accept: application/json
 Accept:application/json
 
