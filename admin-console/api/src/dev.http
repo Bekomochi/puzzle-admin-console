@@ -24,8 +24,8 @@ Accept: application/json
 
 {
     "stageID": 1,
-    "userID": 2,
-    "highScore": 2000
+    "userID": 3,
+    "highScore": 4000
 }
 
 ###ランキング表示
