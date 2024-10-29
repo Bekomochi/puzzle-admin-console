@@ -10,8 +10,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = User::create([
-            'name' => $request->name,
-            'password' => $request->password
+            'name' => $request->name
         ]);
 
         //APIトークンを発行する
@@ -19,8 +18,12 @@ class UserController extends Controller
 
         //ユーザーIDとAPIトークンを返す
         return response()->json(['user_id' => $user->id, 'token' => $token]);
+        /*↑ createTokenメソッド内で、personal_access_tokensテーブルに登録
+        ・トークンとユーザーを関連付ける
+        ・personal_access_tokensのトークンはハッシュ化されている
+        */
     }
-    
+
     public function show(Request $request)
     {
         $user = User::findOrFail($request->user_id);

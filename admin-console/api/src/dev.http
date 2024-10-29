@@ -1,34 +1,35 @@
 ##ユーザー##
 
 ###ユーザー登録
-POST https://api-catpuzzle.japaneast.cloudapp.azure.com/api/users/store
+POST http://localhost:8000/api/users/store
 Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "hoge",
-    "password": "hogehoge"
+    "name": "ki"
 }
 
 ###ユーザー情報取得
-GET https://api-catpuzzle.japaneast.cloudapp.azure.com/api/users/1
+GET http://localhost:8000/api/users/2
 Accept: application/json
-Accept:application/json
+Authorization: Bearer 2|0SJinYabp0J8OxLJUAaGodUuf15Vzp1UoADKyHN196a655f3
 
 ##ランキング##
 
 ###ランキング更新
-POST https://api-catpuzzle.japaneast.cloudapp.azure.com/api/ranking/store
+POST http://localhost:8000/api/ranking/store
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer 2|0SJinYabp0J8OxLJUAaGodUuf15Vzp1UoADKyHN196a655f3
 
 {
     "stageID": 1,
-    "userID": 32,
-    "highScore": 4000
+    "userID": 1,
+    "highScore": 100
 }
 
 ###ランキング表示
-GET https://api-catpuzzle.japaneast.cloudapp.azure.com/api/ranking/show/1
+GET http://localhost:8000/api/ranking/show/1
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer 2|0SJinYabp0J8OxLJUAaGodUuf15Vzp1UoADKyHN196a655f3

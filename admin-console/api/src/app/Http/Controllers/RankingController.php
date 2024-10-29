@@ -14,7 +14,6 @@ class RankingController extends Controller
             'userID' => $request->userID,
             'highScore' => $request->highScore
         ]);
-        return response()->json(['stage_id' => $ranking->stageID]);
     }
 
     public function show(Request $request)
